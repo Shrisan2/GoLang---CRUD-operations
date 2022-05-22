@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "2af7fd60-5eac-4829-bc21-694cab307361",
+		"name": "LearnWednesday",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Check Connection",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2022/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2022",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert A book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Harry Potter and Deadly Hollows Part I\",\r\n    \"author\":\"J.K. Rowling\",\r\n    \"available_copies\": 40,\r\n    \"price\":50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2022/bookLibrary/v1/insertBook",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2022",
+					"path": [
+						"bookLibrary",
+						"v1",
+						"insertBook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBooks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2022/bookLibrary/v1/bookLibrary",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2022",
+					"path": [
+						"bookLibrary",
+						"v1",
+						"bookLibrary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find A book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2022/bookLibrary/v1/getBook?name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2022",
+					"path": [
+						"bookLibrary",
+						"v1",
+						"getBook"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a book price",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2022/bookLibrary/v1/updateBookPrice?id=403dc296-db21-4e6f-852c-91c66d25228a&newPrice=60",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2022",
+					"path": [
+						"bookLibrary",
+						"v1",
+						"updateBookPrice"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "403dc296-db21-4e6f-852c-91c66d25228a"
+						},
+						{
+							"key": "newPrice",
+							"value": "60"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a book available quantity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2022/bookLibrary/v1/updateAvailableCopies?id=403dc296-db21-4e6f-852c-91c66d25228a&availableCopies=60",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2022",
+					"path": [
+						"bookLibrary",
+						"v1",
+						"updateAvailableCopies"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "403dc296-db21-4e6f-852c-91c66d25228a"
+						},
+						{
+							"key": "availableCopies",
+							"value": "60"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2022/bookLibrary/v1/deleteBook?id=403dc296-db21-4e6f-852c-91c66d25228a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2022",
+					"path": [
+						"bookLibrary",
+						"v1",
+						"deleteBook"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "403dc296-db21-4e6f-852c-91c66d25228a"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
